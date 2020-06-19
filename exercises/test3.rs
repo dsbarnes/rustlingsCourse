@@ -7,10 +7,11 @@
 // we expect to get when we call `times_two` with a negative number.
 // No hints, you can do this :)
 
-// I AM NOT DONE
+// Come back to this -- wtf is going on w/ -4 * 2 == -8 ??
 
 pub fn times_two(num: i32) -> i32 {
-    num * 2
+    let two: i32 = 2;
+    num * two
 }
 
 #[cfg(test)]
@@ -19,11 +20,11 @@ mod tests {
 
     #[test]
     fn returns_twice_of_positive_numbers() {
-        assert_eq!(times_two(4), ???);
+        assert_eq!(times_two(4), 8) 
     }
 
     #[test]
     fn returns_twice_of_negative_numbers() {
-        // TODO write an assert for `times_two(-4)`
+        assert_eq!(times_two(-4), -8)
     }
 }
