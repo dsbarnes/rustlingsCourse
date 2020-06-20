@@ -9,22 +9,23 @@
 
 // Come back to this -- wtf is going on w/ -4 * 2 == -8 ??
 
-pub fn times_two(num: i32) -> i32 {
-    let two: i32 = 2;
-    num * two
+pub fn times_two(mut num: i32) -> i32 {
+    num = num * 2;
+    num
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    #[test]
-    fn returns_twice_of_positive_numbers() {
-        assert_eq!(times_two(4), 8) 
-    }
+    // #[test]
+    // fn returns_twice_of_positive_numbers() {
+    //     assert_eq!(times_two(4), 8) 
+    // }
 
     #[test]
     fn returns_twice_of_negative_numbers() {
-        assert_eq!(times_two(-4), -8)
+        let x: i32 = -4;
+        assert_eq!(times_two(x.clone()), -8)
     }
 }
